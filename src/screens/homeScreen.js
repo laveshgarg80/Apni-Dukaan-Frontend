@@ -44,7 +44,7 @@ function HomeScreen() {
             return (
               <span
                 onClick={() => setPage(index + 1)}
-                className={page == index + 1 ? "page_selected" : ""}
+                className={page === index + 1 ? "page_selected" : ""}
                 key={index}
               >
                 {index + 1}
