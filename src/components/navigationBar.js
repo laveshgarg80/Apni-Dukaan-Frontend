@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link to={"/"} className="navbar-brand">
+      <Link to={"/home"} className="navbar-brand">
         Apni Dukaan
       </Link>
       <button
@@ -21,7 +21,7 @@ function NavBar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li>
-            <Link to={"/"} className="nav-link">
+            <Link to={"/home"} className="nav-link">
               Home
             </Link>
           </li>

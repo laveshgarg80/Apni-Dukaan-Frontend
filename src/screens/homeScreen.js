@@ -2,6 +2,7 @@ import "../App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../components/cards";
+import { baseUrl } from "../constants/baseUrl";
 
 function HomeScreen() {
   const [products, setProducts] = useState([]);
@@ -12,11 +13,9 @@ function HomeScreen() {
   }, []);
 
   async function getAllProducts() {
-    axios
-      .post("https://pear-puzzled-salmon.cyclic.app/getProducts?limit=0")
-      .then(function (response) {
-        setProducts(response.data.products);
-      });
+    axios.post(`${baseUrl}/products/getAll?limit=0`).then(function (response) {
+      setProducts(response.data.products);
+    });
   }
 
   return (
